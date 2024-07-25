@@ -14,11 +14,12 @@ export const getTrendMovies = async () => {
   return response.data.results;
 };
 
-export const searchMovie = async (query) => {
-  const response = await api.get(`https://api.themoviedb.org/3/search/movie`, {
+export const getSearchedMovie = async (query) => {
+  const { data } = await api.get(`https://api.themoviedb.org/3/search/movie`, {
     params: {
+      api_key: apiKey,
       query,
     },
   });
-  return response;
+  return data;
 };

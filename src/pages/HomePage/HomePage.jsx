@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTrendMovies, searchMovie } from "../../services/api";
+import { getTrendMovies } from "../../services/api";
 import { MovieList } from "../../components/MovieList/MovieList";
 
 export const HomePage = () => {
@@ -20,6 +20,7 @@ export const HomePage = () => {
   console.log(movies);
   return (
     <div>
+      <h2>Trending today</h2>
       <MovieList arr={movies} />
     </div>
   );
