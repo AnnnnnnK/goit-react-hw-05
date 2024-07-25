@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTrendMovies } from "../../services/api";
+import { getTrendMovies, searchMovie } from "../../services/api";
 import { MovieList } from "../../components/MovieList/MovieList";
 
 export const HomePage = () => {
@@ -9,7 +9,7 @@ export const HomePage = () => {
     try {
       const getMovie = async () => {
         const data = await getTrendMovies();
-        setMovies(data.results);
+        setMovies(data);
       };
       getMovie();
     } catch (error) {

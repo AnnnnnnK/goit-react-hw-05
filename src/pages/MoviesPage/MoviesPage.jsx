@@ -1,10 +1,5 @@
+import { Form } from "../../components/Form/Form";
+
 export const MoviesPage = () => {
-  return (
-    <div>
-      <form action="">
-        <input type="text" />
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  );
+  return <Form />;
 };
