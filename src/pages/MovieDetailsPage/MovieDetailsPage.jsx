@@ -64,7 +64,7 @@ const MovieDetailsPage = () => {
           <NavLink to="cast">Cast</NavLink>
           <NavLink to="reviews">Reviews</NavLink>
         </div>
-        <Suspense>
+        <Suspense fallback={<h2>LOADING YOUR COMPONENT!</h2>}>
           <Outlet />
         </Suspense>
       </div>

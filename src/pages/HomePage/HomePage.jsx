@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { getMovieDetails, getTrendMovies } from "../../services/api";
 import { MovieList } from "../../components/MovieList/MovieList";
-import { useLocation } from "react-router-dom";
-
+import { container, title } from "./HomePage.module.css";
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
-  // const location = useLocation();
-  // const backLink = location.state?.from ?? "/";
 
   useEffect(() => {
     try {
@@ -21,8 +18,11 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Trending today</h2>
+    <div className={container}>
+      <div>
+        <h2 className={title}>Trending today</h2>
+      </div>
+
       <MovieList movieList={movies} />
     </div>
   );

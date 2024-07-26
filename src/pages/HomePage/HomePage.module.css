@@ -1,0 +1,12 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.title {
+  margin: auto;
+  text-align: center;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
