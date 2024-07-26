@@ -8,7 +8,7 @@ const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
 
-  const query = searchParams.get("query");
+  const query = searchParams.get("query") ?? "";
 
   useEffect(() => {
     if (!query) {
@@ -26,8 +26,15 @@ const MoviesPage = () => {
   }, [searchParams]);
 
   const handleSubmit = (value) => {
-    if (value.trim() === "") setSearchParams({});
-    else setSearchParams({ query: value });
+    if (!value) {
+      return setSearchParams({});
+    }
+
+    searchParams.set("query", value);
+
+    setSearchParams(searchParams);
+    // if (value.trim() === "") setSearchParams({});
+    // else setSearchParams({ query: value });
   };
   return (
     <>

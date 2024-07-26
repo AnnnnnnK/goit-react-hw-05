@@ -9,6 +9,7 @@ export const Form = ({ handleSubmit }) => {
   };
 
   const handleChange = ({ target: { value } }) => {
+    // if (!value) setSearchQuery("");
     setSearchQuery(value);
   };
 

@@ -5,8 +5,8 @@ import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
-  const location = useLocation();
-  const backLink = location.state?.from ?? "/";
+  // const location = useLocation();
+  // const backLink = location.state?.from ?? "/";
 
   useEffect(() => {
     try {
@@ -23,7 +23,7 @@ const HomePage = () => {
   return (
     <div>
       <h2>Trending today</h2>
-      <MovieList movieList={movies} location={location} />
+      <MovieList movieList={movies} />
     </div>
   );
 };
