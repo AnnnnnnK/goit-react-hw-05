@@ -4,7 +4,7 @@ import { getSearchedMovie } from "../../services/api";
 import { useEffect, useState } from "react";
 import { MovieList } from "../../components/MovieList/MovieList";
 
-export const MoviesPage = () => {
+const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
 
@@ -36,3 +36,4 @@ export const MoviesPage = () => {
     </>
   );
 };
+export default MoviesPage;

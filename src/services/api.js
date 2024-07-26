@@ -25,11 +25,32 @@ export const getSearchedMovie = async (query) => {
 };
 
 export const getMovieDetails = async (id) => {
-  const { data } = await api.get(`/search/movie`, {
+  const { data } = await api.get(`/movie/${id}`, {
     params: {
       api_key: apiKey,
-      movie_id: id,
     },
   });
+  // console.log(response);
   return data;
 };
+
+export const getMovieCast = async (id) => {
+  const { data } = await api.get(`movie/${id}/credits`, {
+    params: {
+      api_key: apiKey,
+    },
+  });
+  // console.log(response);
+  return data;
+};
+
+export const getMovieReviews = async (id) => {
+  const { data } = await api.get(`movie/${id}/reviews`, {
+    params: {
+      api_key: apiKey,
+    },
+  });
+  // console.log(response);
+  return data;
+};
+// https://api.themoviedb.org/3/movie/{movie_id}/reviews

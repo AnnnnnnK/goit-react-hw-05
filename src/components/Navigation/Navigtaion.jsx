@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export const Navigtaion = () => {
+const Navigtaion = () => {
   return (
     <ul>
       <li>
@@ -12,3 +12,4 @@ export const Navigtaion = () => {
     </ul>
   );
 };
+export default Navigtaion;
