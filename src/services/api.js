@@ -15,10 +15,20 @@ export const getTrendMovies = async () => {
 };
 
 export const getSearchedMovie = async (query) => {
-  const { data } = await api.get(`https://api.themoviedb.org/3/search/movie`, {
+  const { data } = await api.get(`/search/movie`, {
     params: {
       api_key: apiKey,
       query,
+    },
+  });
+  return data;
+};
+
+export const getMovieDetails = async (id) => {
+  const { data } = await api.get(`/search/movie`, {
+    params: {
+      api_key: apiKey,
+      movie_id: id,
     },
   });
   return data;

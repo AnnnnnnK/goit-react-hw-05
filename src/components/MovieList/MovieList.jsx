@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
-export const MovieList = ({ arr }) => {
+export const MovieList = ({ movieList }) => {
+  console.log(movieList);
   return (
     <ul>
-      {arr.map((el) => (
+      {movieList.map((el) => (
         <li key={el.id}>
-          <Link>{el.original_title}</Link>
+          <Link to={`${el.id}`}>{el.original_title}</Link>
         </li>
       ))}
     </ul>

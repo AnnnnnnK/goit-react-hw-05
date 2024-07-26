@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { Form } from "../../components/Form/Form";
 import { getSearchedMovie } from "../../services/api";
 import { useEffect, useState } from "react";
+import { MovieList } from "../../components/MovieList/MovieList";
 
 export const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,7 +17,7 @@ export const MoviesPage = () => {
     const searchMovie = async (searchParams) => {
       try {
         const { results } = await getSearchedMovie(searchParams);
-        console.log(results);
+        setMovies(results);
       } catch (error) {
         console.log(error);
       }
@@ -28,5 +29,10 @@ export const MoviesPage = () => {
     if (value.trim() === "") setSearchParams({});
     else setSearchParams({ query: value });
   };
-  return <Form handleSubmit={handleSubmit} />;
+  return (
+    <>
+      <Form handleSubmit={handleSubmit} />
+      {movies.length > 0 && <MovieList movieList={movies} />}
+    </>
+  );
 };

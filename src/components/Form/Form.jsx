@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export const Form = ({ handleSubmit }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  console.log(searchQuery);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
