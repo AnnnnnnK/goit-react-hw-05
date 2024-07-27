@@ -7,10 +7,10 @@ export const Form = ({ handleSubmit }) => {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     if (searchQuery) handleSubmit(searchQuery);
+    else alert("Please, enter your request");
   };
 
   const handleChange = ({ target: { value } }) => {
-    // if (!value) setSearchQuery("");
     setSearchQuery(value);
   };
 

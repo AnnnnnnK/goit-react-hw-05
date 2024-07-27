@@ -12,10 +12,10 @@
   list-style: none;
 }
 .link {
-  color: aliceblue;
+  color: #bfbfbf;
   font-size: 30px;
   text-decoration: none;
 }
 .active {
-  color: #ffcccc;
+  color: #737373;
 }

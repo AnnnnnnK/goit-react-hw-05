@@ -17,6 +17,8 @@ const MoviesPage = () => {
     const searchMovie = async (searchParams) => {
       try {
         const { results } = await getSearchedMovie(searchParams);
+        if (results.length === 0)
+          alert("Sorry, there are not results with such query");
         setMovies(results);
       } catch (error) {
         console.log(error);
@@ -29,12 +31,8 @@ const MoviesPage = () => {
     if (!value) {
       return setSearchParams({});
     }
-
     searchParams.set("query", value);
-
     setSearchParams(searchParams);
-    // if (value.trim() === "") setSearchParams({});
-    // else setSearchParams({ query: value });
   };
   return (
     <>
