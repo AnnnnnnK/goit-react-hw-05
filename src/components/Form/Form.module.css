@@ -1,0 +1,128 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* width: 400px; */
+  min-width: 250px;
+  gap: 20px;
+  /* margin: auto; */
+  /* position: relative; */
+  /* text-transform: uppercase; */
+  /* outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #5c8ca7;
+  padding: 10px;
+  color: white;
+  border: 1px solid #3498db;
+  border-radius: 3px;
+  font-size: 1.5em;
+  font-weight: bold;
+  /* margin-top: 5px; */
+  /* cursor: pointer;
+  position: relative;
+  top: 0; */
+}
+.input {
+  margin: auto;
+  /* text-transform: uppercase; */
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  /* width: 100%; */
+  background-color: #e6e6e6;
+  /* padding: 10px; */
+  color: black;
+  border: 1px solid #4d4d4d;
+  border-radius: 3px;
+  /* font-size: 1.5em; */
+  /* font-weight: bold; */
+  /* margin-top: 5px; */
+  cursor: pointer;
+  /* position: relative; */
+  /* top: 0; */
+  padding: 10px 20px;
+}
+
+.input:hover {
+  background-color: #d9d9d9;
+}
+.input:focus {
+  outline: none;
+}
+
+/* .input:active {
+  background: #5c8ca7;
+} */
+::placeholder:focus {
+  outline: none;
+  border-color: silver;
+  background-color: white;
+}
+
+.button {
+  appearance: none;
+  color: white;
+  background-color: #737373;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #bfbfbf;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.button:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button:focus {
+  outline: 1px transparent;
+}
+
+.button:before {
+  display: none;
+}
+
+.button:-webkit-details-marker {
+  display: none;
+}
