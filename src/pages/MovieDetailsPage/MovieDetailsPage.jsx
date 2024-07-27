@@ -23,9 +23,7 @@ const MovieDetailsPage = () => {
   const [error, setError] = useState(false);
 
   const location = useLocation();
-  // console.log(location);
   const goBackRef = useRef(location?.state || "/");
-  // console.log(movieId);
 
   useEffect(() => {
     if (!movieId) return;
@@ -52,6 +50,7 @@ const MovieDetailsPage = () => {
   return (
     <>
       {loading && <Loader />}
+      {error && <Error />}
       <div className={container}>
         <NavLink to={goBackRef.current} className={button}>
           Go back

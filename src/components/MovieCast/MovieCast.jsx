@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getMovieCast } from "../../services/api";
 import { useParams } from "react-router-dom";
-import { container } from "./Cast.module.css";
+import { container } from "./MovieCast.module.css";
 import Loader from "../Loader/Loader";
 import Error from "../Error/Error";
 
-const Cast = () => {
+const MovieCast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -54,4 +54,4 @@ const Cast = () => {
   );
 };
 
-export default Cast;
+export default MovieCast;

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { getMovieReviews } from "../../services/api";
 import { useParams } from "react-router-dom";
-import styles from "./Reviews.module.css";
+import styles from "./MovieReviews.module.css";
 import Loader from "../Loader/Loader";
 
-const Reviews = () => {
+const MovieReviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -49,4 +49,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default MovieReviews;
